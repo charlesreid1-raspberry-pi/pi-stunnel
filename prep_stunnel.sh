@@ -5,9 +5,14 @@ mkdir -p /var/run/stunnel4 /var/log/stunnel4
 
 # -------------
 # Config
+conf="stunnel.conf"
 
-if [ -e "stunnel.conf" ]; then
-	cp stunnel.conf /etc/stunnel/stunnel.conf
+if [ -e ${conf} ]; then
+	if [ "$(/bin/grep 'A.B.C.D' ${conf})" == "" ]; then
+		cp stunnel.conf /etc/stunnel/stunnel.conf
+	else
+		echo "Change A.B.C.D in ${conf} to the server's IP."
+	fi
 else
 	echo "Create an stunnel.conf or use one of the examples."
 fi
