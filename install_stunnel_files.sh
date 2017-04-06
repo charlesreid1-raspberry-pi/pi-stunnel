@@ -1,7 +1,10 @@
 #!/bin/bash
-
-# make place for run and log
-mkdir -p /var/run/stunnel4 /var/log/stunnel4
+#
+# Install Stunnel Files
+#
+# Check if the config file is there and has a real IP address in it.
+# If so, copy it over the current stunnel config file.
+# Then copy the server certificate and key to stunnel key file.
 
 # -------------
 # Config
