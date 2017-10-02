@@ -8,7 +8,7 @@ Run stunnel client on a Raspberry Pi. This requires an stunnel server somewhere,
 
 Step 1: Install stunnel onto the Raspberry Pi.
 
-Step 2: Copy the server certificate and key file onto the Raspberry Pi.
+Step 2: Copy the server certificate `stunnel.fullchain.pem` and key file `stunnel.key.pem` onto the Raspberry Pi.
 
 Step 3: Create an stunnel.conf using one of the examples or your own configuration.
 
